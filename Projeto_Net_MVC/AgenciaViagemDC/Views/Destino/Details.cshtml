@@ -1,0 +1,35 @@
+﻿@model AgenciaViagemDC.Models.Destino
+
+@{
+    ViewData["Title"] = "Detalhes";
+}
+
+<h1 class="padding-texto">Detalhes do Destino</h1>
+
+<div>
+    
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.UF)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.UF)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Cidade)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Cidade)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Preco)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Preco)
+        </dd>
+    </dl>
+</div>
+<div>
+    <button class="btn btn-primary hover-diferente"><a class="cor-da-ancora" asp-action="Index">Voltar para a lista</a></button>
+    <button class="btn btn-warning hover-diferente"><a class="cor-da-ancora" asp-action="Edit" asp-route-id="@Model?.Id">Alterar Informações</a></button>
+</div>

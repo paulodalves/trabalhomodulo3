@@ -1,0 +1,53 @@
+CREATE DATABASE AgenciaViagem
+
+USE AgenciaViagem
+
+CREATE TABLE Cliente (
+	Id INT PRIMARY KEY IDENTITY,
+	Nome VARCHAR(50) NOT NULL,
+	Cpf VARCHAR(11) NOT NULL,
+	Endereco VARCHAR(50) NOT NULL,
+	Telefone VARCHAR(12) NOT NULL,
+	Email VARCHAR(50) NOT NULL
+)
+
+CREATE TABLE Destino (
+    Id INT PRIMARY KEY IDENTITY,
+    Uf VARCHAR(2) NOT NULL,
+    Cidade VARCHAR(50) NOT NULL,
+    Preco DECIMAL NOT NULL
+)
+
+CREATE TABLE Viaja (
+    Id INT PRIMARY KEY IDENTITY,
+    CidadeDestino VARCHAR(50) NOT NULL,
+    NomeCliente VARCHAR(50) NOT NULL,
+    DataViagem DATE NOT NULL,
+    PrecoPassagem DECIMAL NOT NULL,
+    QtdPassagem INT NOT NULL,
+    ValorTotal DECIMAL NOT NULL,
+)
+
+INSERT INTO Cliente (Nome,Cpf,Endereco,Telefone,email)
+VALUES
+  ('Nigel','57462256614','Ap #178-1699 Aliquet St.','313345789153','dapibus@aol.org'),
+  ('Madaline','41486696306','Ap #132-3453 Mattis. Avenue','552441927797','rhoncus.nullam.velit@aol.net'),
+  ('Pandora','87376725822','Ap #873-7571 Amet, Avenue','864233354748','tristique.pellentesque.tellus@icloud.couk'),
+  ('Kaye','42989917036','719-9428 Nunc St.','610853813503','pede.suspendisse@yahoo.com'),
+  ('Emerson','33213312286','546-5559 Dui Rd.','552864378011','blandit.congue@hotmail.net')
+
+INSERT INTO Destino (Uf,Cidade,Preco)
+VALUES
+  ('MG','Abaetetuba',853),
+  ('SP','Ipatinga',671),
+  ('RJ','Juazeiro',96),
+  ('PE','Santa Luzia',333),
+  ('PR','Cajazeiras',926);
+
+INSERT INTO Viaja (CidadeDestino,NomeCliente,DataViagem,PrecoPassagem,QtdPassagem,ValorTotal)
+VALUES
+  ('Barra do Corda','Breanna Oneal','19/10/2022',625,2,91),
+  ('Paço do Lumiar','Upton Mckinney','02/04/2022',656,4,811),
+  ('Petrolina','Cassidy Buckley','12/04/2022',215,5,883),
+  ('Fortaleza','Clinton Rios','21/07/2022',293,4,924),
+  ('Guarulhos','Ann Santos','30/06/2021',840,4,124)

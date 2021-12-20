@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content:space-around;
+    margin-bottom: 50px;    
+}
+
+.menu {
+    background: #fffb01;
+    border-radius: 0 0 15px 15px;
+}
+
+.cabecalho a {
+    display: flex;
+}
+
+.cabecalho div {
+    display: flex;
+}
+
+.cabecalho img {
+    width: 100px;
+    padding-top: 5px ;
+}
+
+.menu {
+    display: flex;
+    
+}
+
+.menu ul{
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+
+}
+
+.menu li {
+    display: flex;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000000;
+    padding: 20px 10px 20px 10px;
+}
+
+.menu a:hover {
+    background: rgba(0, 0, 0, 1);
+    color: #ffffff;
+    border-radius: 0 0 15px 15px;
+}
+
+.rodape {
+    margin-top: 50px;
+    display: flex;
+    background: #000000;
+    color: #ffffff;
+    justify-content: space-around;
+    height: 100px;
+    align-items: center;   
+}
+
+/* INICIO - conteudo da pagina Home*/
+
+.titulo > h1 {
+    font-size: 60px;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 0;
+    transition: 0.5s;
+}
+
+.titulo > h2 {
+    margin-top: 0;
+    text-align: center;
+    transition: 0.5s;
+
+}
+
+.apresentacao {
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    box-shadow: 0 0 5px grey;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.apresentacao img {
+    width: 400px;
+    transition: 0.7s;
+}
+
+.apresentacao article {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.apresentacao p {
+    text-align: justify;
+}
+
+
+.comentarios {
+    display: flex;
+    justify-content: center;
+}
+
+.centr {
+    text-align: center;
+}
+
+.card {
+    background: #0018f5;
+    display: flex;
+    border-radius: 25px;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: 10px 25px 10px 25px;
+    margin-bottom: 10px;
+    width: 600px;
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: 0.5s;
+    box-shadow: 0 0 5px grey;
+}
+
+.card img {
+    width: 200px;
+    margin-right: 15px;
+}
+
+.card h3 {
+    color: #ffffff;
+}
+
+.card p {
+    text-align: justify;
+    color: #ffffff;
+}
+
+@media screen and (max-width: 1200px) {
+    .comentarios {
+        flex-direction: column;
+        align-items: center;
+    }
+
+  }
+
+
+@media screen and (max-width: 900px) {
+    .apresentacao {
+      flex-direction: column;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    .apresentacao h3 {
+        text-align: center;
+    }
+
+    .apresentacao img {
+        margin: 0 auto;
+    }
+
+    
+  }
+
+  @media screen and (max-width: 700px) {
+    
+    .card {
+        width: 500px;
+        transition: 0.5s;
+    }
+    
+  }
+
+
+  @media screen and (max-width: 600px) {
+    .apresentacao img {
+        transition: 0.7s;
+        width: 300px;
+    }
+
+    .card {
+        flex-direction: column;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 400px;
+        transition: 0.5s;
+    }
+
+    .card h3 {
+        text-align: center;
+    }
+
+    .titulo > h1 {
+       font-size: 40px;
+        transition: 0.5s;
+    }
+    
+    .titulo > h2 {
+        font-size:20px;
+        transition: 0.5s;
+    
+    }
+
+  }
+
+/*FIM - conteudo home*/
+
+/*INICIO - Contato */
+
+.h1-c {
+    font-size: 60px;
+    transition: 0.5s;
+    margin-top: 0;
+    text-align: center;
+}
+
+.linha-vertical {
+    height: 450px;
+    border: solid 1px black;
+    margin: 0 50px 0 50px;
+}
+
+.central-form {
+    display: flex;
+    justify-content: center;
+}
+
+.central-form form {
+    border-radius: 25px;
+    box-shadow: 0 0 5px grey;
+    padding: 25px;
+}
+
+input[type=text] {
+    font-size: 20px;
+    width: 400px;
+}
+
+input[type=email] {
+    font-size: 20px;
+    width: 400px;
+}
+
+textarea {
+    resize: none;
+}
+
+@media screen and (max-width: 850px)  {
+    .central-form {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .central-form form {
+        margin: 0 8px 0 8px;
+        
+    }
+
+
+    .linha-vertical {
+        display: none;
+    }
+
+    .central-form section {
+        text-align: center;
+    }
+
+    input[type=button] {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .h1-c {
+        font-size: 40px;
+        transition: 0.5s;
+        margin-top: 0;
+    }
+
+}
+
+/*FIM - Contato */
+
+/*INICIO - Promo */
+
+.promoco h1 {
+    font-size: 60px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.promo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 25px 0 25px;
+}
+
+.promo img {
+    width: 300px;
+    margin: 0 10px 0 10px;
+    border-radius: 15px;
+}
+
+.promo-ani {
+    transition: 0.5s;
+}
+
+.promo-ani:hover {
+   transform: translateY(10px);
+}
+
+.promoval {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.promoval p {
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.promoval:hover p {
+    box-shadow: 0 0 10px gray;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    margin-bottom: 0;
+}
+
+@media screen and (max-width:1000px) {
+    .promo {
+        flex-direction: column;
+    }
+
+    .promoco h1 {
+        font-size: 40px;
+        text-align: center;
+        transition: 0.5s;
+    }
+
+}
+
+/* FIM - promoçoes */
+
+/*INICIO - Destinos */
+
+.destinos h1 {
+    font-size: 60px;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 0;
+    transition: 0.5s;
+}
+
+.lugares {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.cartao {
+    background: white;
+    box-shadow: 0px 2px 20px #0d13362a;
+    border-radius: 20px;
+    width: 350px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 30px;
+}
+
+.cabeca {
+    padding: 20px;
+    padding-top: 0;
+}
+
+.ptexto {
+    color: #000000;
+}
+
+.stexto {
+    color: #727272;
+}
+
+.ttexto {
+    color: #222222;
+}
+
+.foto img {
+    width:350px;
+}
+
+.pe {
+    padding: 20px;
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+@media screen and (max-width:1200px) {
+    .lugares {
+        grid-template-columns: auto auto ;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .lugares {
+        grid-template-columns: auto;
+
+    }
+
+    .destinos h1 {
+        font-size: 40px;
+        transition: 0.5s;
+    }
+}

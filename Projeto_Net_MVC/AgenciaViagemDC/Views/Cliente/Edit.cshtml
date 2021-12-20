@@ -1,0 +1,53 @@
+﻿@model AgenciaViagemDC.Models.Cliente
+
+@{
+    ViewData["Title"] = "Alterar";
+}
+
+<h1 class="padding-texto centraliza-texto">Alterar Cliente</h1>
+
+<div class="centraliza-form">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Nome" class="control-label"></label>
+                <input asp-for="Nome" maxlength="50" class="form-control" placeholder="Renan"/>
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cpf" class="control-label"></label>
+                <input asp-for="Cpf" maxlength="11" class="form-control" placeholder="12345678901"/>
+                <span asp-validation-for="Cpf" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Endereco" class="control-label"></label>
+                <input asp-for="Endereco" maxlength="50" class="form-control" placeholder="Av. Paulista"/>
+                <span asp-validation-for="Endereco" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Telefone" class="control-label"></label>
+                <input asp-for="Telefone" maxlength="12" class="form-control" placeholder="21999999999"/>
+                <span asp-validation-for="Telefone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" maxlength="50" class="form-control" placeholder="renan@email.com"/>
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Salvar Alterações" class="btn btn-success" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <button class="btn btn-primary hover-diferente"><a class="cor-da-ancora" asp-action="Index">Voltar para a lista</a></button>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

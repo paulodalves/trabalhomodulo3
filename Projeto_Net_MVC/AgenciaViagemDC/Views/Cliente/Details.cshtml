@@ -1,0 +1,47 @@
+﻿@model AgenciaViagemDC.Models.Cliente
+
+@{
+    ViewData["Title"] = "Detalhes";
+}
+
+<h1 class="padding-texto">Detalhes do Cliente</h1>
+
+<div>
+   
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Cpf)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Cpf)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Endereco)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Endereco)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Telefone)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Telefone)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+    </dl>
+</div>
+<div>
+    <button class="btn btn-primary hover-diferente"><a class="cor-da-ancora" asp-action="Index">Voltar para a lista</a></button>
+    <button class="btn btn-warning hover-diferente"><a class="cor-da-ancora" asp-action="Edit" asp-route-id="@Model?.Id">Alterar Informações</a></button>
+</div>

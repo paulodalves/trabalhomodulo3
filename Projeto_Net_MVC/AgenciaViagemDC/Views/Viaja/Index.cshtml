@@ -1,0 +1,70 @@
+﻿@model IEnumerable<AgenciaViagemDC.Models.Viaja>
+
+@{
+    ViewData["Title"] = "Viagens";
+}
+
+<h1 class="padding-texto">Viagens</h1>
+
+<p>
+     <button class="btn btn-success hover-diferente"><a class="cor-da-ancora" asp-action="Create">Cadastrar Viagem</a></button>
+</p>
+<div class="table-responsive">
+<table class="table table-hover">
+    <caption>Lista de Viagens</caption>
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CidadeDestino)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NomeCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataViagem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrecoPassagem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QtdPassagem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ValorTotal)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CidadeDestino)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataViagem)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrecoPassagem)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QtdPassagem)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ValorTotal)
+            </td>
+            <td>
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <button class="btn btn-sm btn-warning hover-diferente"><a class="cor-da-ancora" asp-action="Edit" asp-route-id="@item.Id">Alterar</a></button>
+                <button class="btn btn-sm btn-info hover-diferente"><a class="cor-da-ancora" asp-action="Details" asp-route-id="@item.Id">Detalhes</a></button>
+                <button class="btn btn-sm btn-danger hover-diferente"><a class="cor-da-ancora" asp-action="Delete" asp-route-id="@item.Id">Excluir</a></button>
+                </div>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</div>

@@ -1,0 +1,53 @@
+﻿@model IEnumerable<AgenciaViagemDC.Models.Destino>
+
+@{
+    ViewData["Title"] = "Destinos";
+}
+
+<h1 class="padding-texto">Destinos</h1>
+
+<p>
+     <button class="btn btn-success hover-diferente"><a class="cor-da-ancora" asp-action="Create">Cadastrar Destino</a></button>
+</p>
+<div class="table-responsive">
+<table class="table table-hover">
+    <caption>Lista de Destinos</caption>
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UF)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Preco)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UF)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Preco)
+            </td>
+            <td>
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <button class="btn btn-sm btn-warning hover-diferente"><a class="cor-da-ancora" asp-action="Edit" asp-route-id="@item.Id">Alterar</a></button>
+                <button class="btn btn-sm btn-info hover-diferente"><a class="cor-da-ancora" asp-action="Details" asp-route-id="@item.Id">Detalhes</a></button>
+                <button class="btn btn-sm btn-danger hover-diferente"><a class="cor-da-ancora" asp-action="Delete" asp-route-id="@item.Id">Excluir</a></button>
+                </div>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</div>
+

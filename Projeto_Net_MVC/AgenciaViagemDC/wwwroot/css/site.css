@@ -1,0 +1,120 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    font-family: 'Rubik', sans-serif;
+}
+
+/*  INICIO dos Estilos das páginas de CRUD */
+
+.centraliza-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.padding-texto {
+    padding: 15px 15px 15px 0;
+}
+
+.centraliza-texto {
+    text-align: center;
+}
+
+.cor-da-ancora {
+    text-decoration: none;
+    color: white;
+}
+
+
+.centro-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.hover-diferente a:hover{
+    color:white;
+}
+
+/* permite que surge um scroll quando há muitos cadastros*/
+.table-responsive {
+    max-height: 500px;
+}
+
+/*  FIM dos Estilos das páginas de CRUD */
+
+
+/*  INICIO dos Estilos da Home - Index */
+
+.artigo {
+    display: flex;
+    border: 1px solid #d6d2d2;
+    padding: 8px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.espaco {
+    padding: 10px 10px 10px 30px;
+}
+
+.img {
+    width: 250px;
+}
+
+.img-alinha {
+    display:flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.justifica {
+   text-align: justify;
+}
+
+
+/* Resposividade para os cards da home*/
+@media (max-width: 750px) {
+    .artigo {
+        flex-direction: column;
+    }
+    .h5-centro {
+        text-align: center;
+    }
+}
+
+/*  FIM dos Estilos da Home - Index */
+
+/* INÍCIO dos Estilos da Home - Privacy */
+
+.promocoes {
+    display: flex;
+    justify-content:center;
+}
+
+.promocoes span {
+    margin-left: 60px;
+}
+
+.promocoes div {
+    padding: 15px;
+}
+
+.promocoes img:hover {
+    transform: translateY(15px);
+    transition: 0.5s;
+}

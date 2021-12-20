@@ -1,0 +1,60 @@
+﻿@model AgenciaViagemDC.Models.Viaja
+
+@{
+    ViewData["Title"] = "Alterar";
+}
+
+<h1 class="padding-texto centraliza-texto">Alterar Viajem</h1>
+
+
+<div class="centraliza-form">
+
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="CidadeDestino" class="control-label"></label>
+                <input asp-for="CidadeDestino" maxlength="50" class="form-control" placeholder="Rio de Janeiro" />
+                <span asp-validation-for="CidadeDestino" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NomeCliente" class="control-label"></label>
+                <input asp-for="NomeCliente"maxlength="50" class="form-control" placeholder="Renan" />
+                <span asp-validation-for="NomeCliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataViagem" class="control-label"></label>
+                <input asp-for="DataViagem" class="form-control" />
+                <span asp-validation-for="DataViagem" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PrecoPassagem" class="control-label"></label>
+                <input asp-for="PrecoPassagem" class="form-control" placeholder="259" />
+                <span asp-validation-for="PrecoPassagem" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="QtdPassagem" class="control-label"></label>
+                <input asp-for="QtdPassagem" class="form-control" placeholder="3"/>
+                <span asp-validation-for="QtdPassagem" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ValorTotal" class="control-label"></label>
+                <input asp-for="ValorTotal" class="form-control" placeholder="259"/>
+                <span asp-validation-for="ValorTotal" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Salvar Alterações" class="btn btn-success" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <button class="btn btn-primary hover-diferente"><a class="cor-da-ancora" asp-action="Index">Voltar para a lista</a></button>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
